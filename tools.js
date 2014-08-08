@@ -15,3 +15,11 @@ var Log={
 		console.log("["+new Date().toString()+"]---"+logType.toUpperCase()+":"+msg);
 	}
 };
+
+var Test={
+	isTrue:function(arg){
+		if(!arg){
+			throw "期待是true,实际是false";
+		}
+	}
+};
