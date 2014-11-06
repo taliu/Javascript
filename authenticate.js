@@ -1,4 +1,5 @@
 
+//对HTTP Authentication 登入做服务器端解析和响应。
 http.createServer(function(req,resp){
    console.log("[", new Date().toLocaleTimeString(),"]---In comes a " + req.method + " to " + req.url);
    console.log("headers:",req.headers);
