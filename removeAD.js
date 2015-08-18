@@ -1,7 +1,11 @@
-
+for(var i=1;i<5;i++){
+	
 setTimeout(function(){
   removeAD();
-},1000);
+},1000*i);
+
+}
+
 
 function removeAD(){
 	if(/.*\.qq\.com.*/.test(location.href)){//qq.coms
