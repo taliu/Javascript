@@ -12,7 +12,7 @@ function removeAD(){
 	   $("div[bosszone='rightAD'],.l_qq_com").remove();
 	}
 	
-	//$("iframe").remove();
+	$("iframe").remove();
 
 	$("[class]").each(function(){
 	  var classArr= this.className.split(" ");
@@ -40,7 +40,7 @@ function test(val){
 	  return false;
 	}
 	var arr=[
-	        "_ad$","^ad_",".*_ad_.*","-ad$","^ad-",".*-ad-.*"//一般广告
+	       "_ad$","^ad_",".*_ad_.*","-ad$","^ad-",".*-ad-.*"//一般广告
 	       ,'sinaad.*'//新浪广告
 		   ];
 	for(var i in arr){
