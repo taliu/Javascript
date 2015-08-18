@@ -35,8 +35,10 @@ function test(val){
 	if(isAllow(val)){
 	  return false;
 	}
-	if(val=='sina_keyword_ad_area2')
-	var arr=["_ad$","^ad_",".*_ad_.*","-ad$","^ad-",".*-ad-.*",'sinaad.*'];
+	var arr=[
+	        "_ad$","^ad_",".*_ad_.*","-ad$","^ad-",".*-ad-.*"//一般广告
+	       ,'sinaad.*'//新浪广告
+		   ];
 	for(var i in arr){
 	  if(new RegExp(arr[i],"i").test(val)){
 		return true;
