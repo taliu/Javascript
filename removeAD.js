@@ -1,19 +1,24 @@
-for(var i=0;i<5;i++){
-	
+ 
+(function loop(i){
 setTimeout(function(){
   removeAD();
+  i<1000&&loop(i+1);
 },1000*i);
+}(0))
 
-}
+ 
 
 
 function removeAD(){
 	if(/.*\.qq\.com.*/.test(location.href)){//qq.coms
 	   $("div[bosszone='rightAD'],.l_qq_com").remove();
 	}
+	if($("iframe")[0]){//大多情况下iframe都是广告
+		$("iframe").remove();
+		console.log("remove tag:iframe"");
+	}
 	
-	$("iframe").remove();
-
+     
 	$("[class]").each(function(){
 	  var classArr= this.className.split(" ");
 	  for(var i in classArr){
