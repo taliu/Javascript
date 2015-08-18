@@ -30,6 +30,10 @@ function removeAD(){
 
 function test(val){
 	val=$.trim(val);
+	if(isAllow(val)){
+	  return false;
+	}
+	if(val=='sina_keyword_ad_area2')
 	var arr=["_ad$","^ad_",".*_ad_.*","-ad$","^ad-",".*-ad-.*"];
 	for(var i in arr){
 	  if(new RegExp(arr[i],"i").test(val)){
@@ -39,3 +43,12 @@ function test(val){
 	return false;
 }
 
+function isAllow(val){
+	var arr=["sina_keyword_ad_area2"];
+	for(var i in arr){
+	  if( val==arr[i]){
+		return true;
+	  }
+	}
+	return false;
+}
