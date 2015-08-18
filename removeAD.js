@@ -16,6 +16,7 @@ function removeAD(){
 		var name=classArr[i];
 		if(name&&test(name)){//判断为广告就移除
 			 $(this).remove();
+			 console.log("remove class:"+name);
 		}
 	  }
 	})
@@ -24,6 +25,7 @@ function removeAD(){
 		var id= this.id;
 		if(id&&test(id)){//判断为广告就移除
 			 $(this).remove();
+			 console.log("remove id:"+id);
 		}
 	});
 }
@@ -34,7 +36,7 @@ function test(val){
 	  return false;
 	}
 	if(val=='sina_keyword_ad_area2')
-	var arr=["_ad$","^ad_",".*_ad_.*","-ad$","^ad-",".*-ad-.*"];
+	var arr=["_ad$","^ad_",".*_ad_.*","-ad$","^ad-",".*-ad-.*",'sinaad.*'];
 	for(var i in arr){
 	  if(new RegExp(arr[i],"i").test(val)){
 		return true;
