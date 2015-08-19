@@ -15,7 +15,7 @@ function removeAD(){
 	}
 	if($("iframe")[0]){//大多情况下iframe都是广告
 		$("iframe").remove();
-		console.log("remove tag:iframe"");
+		console.log("remove tag:iframe");
 	}
 	
      
