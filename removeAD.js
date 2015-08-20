@@ -14,9 +14,7 @@ function removeAD(){
 	   $("div[bosszone='rightAD'],.l_qq_com").remove();
 	}
 	
-	if($("iframe")[0]
-	     && location.href.indexOf("jira.jrj.com.cn")==-1 
-	   ){//大多情况下iframe都是广告
+	if($("iframe")[0]&&location.href.indexOf("jira.jrj.com.cn")==-1){//大多情况下iframe都是广告
 		$("iframe").remove();
 		console.log("remove tag:iframe");
 	}
