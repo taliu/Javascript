@@ -58,7 +58,7 @@ function test(val){
 }
 
 function isAllow(val){
-	var arr=["sina_keyword_ad_area2"];
+	var arr=["sina_keyword_ad_area2","hq-ad-ctn","aboutus-ad-ctn"];
 	for(var i in arr){
 	  if( val==arr[i]){
 		return true;
