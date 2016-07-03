@@ -10,3 +10,5 @@ function sort(arr){
   });
   return arr;
 }
+
+sort([3,2,4,1]);
