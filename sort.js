@@ -12,5 +12,7 @@ function sort(arr){
 }
 
 sort([3,2,4,1]);
+console.log("hello");
 sort([4,5,3,2,4,1]);
+console.log("world");
 sort([6,4,5,3,2,4,1]);
