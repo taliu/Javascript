@@ -13,4 +13,5 @@ function sort(arr){
 
 sort([3,2,4,1]);
 sort([4,5,3,2,4,1]);
+console.log("just do it");
 sort([6,4,5,3,2,4,1]);
