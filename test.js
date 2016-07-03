@@ -3,3 +3,4 @@ function test(){
 }
 console.log("this is a test");
 console.log("2 this is a test");
+console.log("3 this is a test");
