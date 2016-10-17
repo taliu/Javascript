@@ -5,13 +5,12 @@ const chai = require("chai");
 chai.use(require("chai-as-promised"));
 const expect = chai.expect;
 const _ = require('lodash');
-
 describe('#co.test', function () {
     function getId(id){
         return new Promise(function(resole){
             let time = _.random(1,1000*3)
             setTimeout(function(){
-                console.log(id);
+                console.log("id =",id);
                 resole(id);
             },time);
         });
@@ -19,76 +18,77 @@ describe('#co.test', function () {
     before(function () {
        return getId(1);
     });
-    it("2",function(){
+    it("it2",function(){
         return getId(2);
     })
-    describe("4+",function(){
-        it("4",function(){
+    describe("describe4+",function(){
+        it("it4",function(){
             return getId(4);
         })
-        it("5",function(){
+        it("it5",function(){
             return getId(5);
         })
-        it("6",function(){
+        it("it6",function(){
             return getId(6);
         })
     });
 
-    describe("7+",function(){
-        it("7",function(){
+    describe("describe7+",function(){
+        it("it7",function(){
             return getId(7);
         })
     });
 
-    describe("8+",function(){
-       
-        describe("9+",function(){
-            it("9",function(){
+    describe("describe8+",function(){
+
+        describe("describe9+",function(){
+            it("it9",function(){
                 return getId(9);
             })
-            it("10",function(){
+            it("it10",function(){
                 return getId(10);
             })
         });
-        it("8",function(){
+        it("it8",function(){
             return getId(8);
         })
 
     });
 
-    it("3",function(){
+    it("it3",function(){
         return getId(3);
     })
 });
 ```
 ## 结果：
 ```
- 1
- 2
- √ 2 (4228ms)
- 3
- √ 3 (2356ms)
- 4+
- 4
- √ 4 (4810ms)
- 5
- √ 5 (2704ms)
- 6
- √ 6 (3991ms)
- 7+
- 7
- √ 7 (818ms)
- 8+
- 8
- √ 8 (4564ms)
- 9+
- 9
- √ 9 (4900ms)
- 10
- √ 10 (4988ms)
+ id = 1
+id = 2
+    √ it2 (1863ms)
+id = 3
+    √ it3 (2513ms)
+    describe4+
+id = 4
+      √ it4 (714ms)
+id = 5
+      √ it5 (2375ms)
+id = 6
+      √ it6 (376ms)
+    describe7+
+id = 7
+      √ it7 (2158ms)
+    describe8+
+id = 8
+      √ it8 (817ms)
+      describe9+
+id = 9
+        √ it9 (2136ms)
+id = 10
+        √ it10 (104ms)
 
 
- 9 passing (36s)
+  9 passing (14s)
+
  ```
  
 ##结论
