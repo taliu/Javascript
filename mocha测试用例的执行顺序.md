@@ -41,10 +41,7 @@ describe('#co.test', function () {
     });
 
     describe("8+",function(){
-        it("8",function(){
-            return getId(8);
-        })
-
+       
         describe("9+",function(){
             it("9",function(){
                 return getId(9);
@@ -53,6 +50,9 @@ describe('#co.test', function () {
                 return getId(10);
             })
         });
+        it("8",function(){
+            return getId(8);
+        })
 
     });
 
