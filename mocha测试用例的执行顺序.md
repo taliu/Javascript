@@ -1,13 +1,11 @@
 # mocha测试用例的执行顺序
 ```javascript
-/**
- * Created by ljp on 2016/10/17.
- */
 'use strict'
-const co = require('co');
+const chai = require("chai");
+chai.use(require("chai-as-promised"));
+const expect = chai.expect;
 const _ = require('lodash');
-const helper = require('../../test_helper');
-const expect = helper.expect();
+
 describe('#co.test', function () {
     function getId(id){
         return new Promise(function(resole){
