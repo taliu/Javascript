@@ -10,9 +10,13 @@ setTimeout(function(){
 
 
 function removeAD(){
-	if(/.*\.qq\.com.*/.test(location.href)){//qq.coms
+	if(/.*\.qq\.com.*/.test(location.href)){//qq.com
 	   $("div[bosszone='rightAD'],.l_qq_com").remove();
 	}
+	if(/.*\.baidu\.com.*/.test(location.href)){//baidu.com
+	   $("div[cmatchid]").remove()
+	}
+	
 /*	
 	if($("iframe")[0]&&location.href.indexOf("jira.jrj.com.cn")==-1){//大多情况下iframe都是广告
 		$("iframe").remove();
