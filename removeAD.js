@@ -15,7 +15,8 @@ function removeAD(){
 	}
 	if(/.*\.baidu\.com.*/.test(location.href)){//baidu.com
 	   $("div[cmatchid]").remove();
-	  $("span.ec_tuiguang_pplink").parents('.result').remove();
+	   $("span.ec_tuiguang_pplink").parents('.result').remove();
+	   $("span.ec-pc_brand_tip-text").parents('.cr-content').remove()
 	}
 	
 /*	
