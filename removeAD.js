@@ -1,6 +1,7 @@
  
 (function loop(i){
 setTimeout(function(){
+  console.log("begin remove ad",i)
   removeAD();
   i<1000&&loop(i+1);
 },1000*i);
