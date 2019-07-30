@@ -1,7 +1,6 @@
  
 (function loop(i){
 setTimeout(function(){
-  console.log("begin remove ad",i)
   removeAD();
   i<1000&&loop(i+1);
 },1000*i);
@@ -15,7 +14,8 @@ function removeAD(){
 	   $("div[bosszone='rightAD'],.l_qq_com").remove();
 	}
 	if(/.*\.baidu\.com.*/.test(location.href)){//baidu.com
-	   $("div[cmatchid]").remove()
+	   $("div[cmatchid]").remove();
+	  $("span.ec_tuiguang_pplink").parents('.result').remove();
 	}
 	
 /*	
